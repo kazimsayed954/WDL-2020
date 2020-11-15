@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <title>login</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="title">
+      Login Form
+    </div>
+    <form method="post" action="login.html">
+      <div class="field">
+        <input onkeyup="check()" id="email" autocomplete="off" type="text" required>
+        <label>Email Address</label>
+        <div class="icons">
+          <span class="icon1 fas fa-exclamatiom"></span>
+          <span class="icon2 fas fa-check"></span>
+        </div>
+      </div>
+      <div class="error-text">
+        Please Enter Valid Email Address
+      </div>
+
+
+      <div class="field">
+        <input id="pswrd_1" type="password" required>
+        <label>password</label>
+        <span class="show-btn"><i class="fas fa-eye"></i></span>
+      </div>
+
+
+
+      <div class="field">
+        <button type="submit">Log In</button>
+      </div>
+      <br>
+      <div class="signup-link">
+        Sign-up from the given Link <a href="signup.html">Sign-up now</a>
+      </div>
+    </form>
+  </div>
+  <script src="/js/login.js"></script>
+  <script src="/js/password_show.js"></script>
+
+</body>
+
+</html>

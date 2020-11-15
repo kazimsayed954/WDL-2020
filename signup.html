@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- used for eye button for show password  -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <style>
+    .wrapper {
+      height: 720px;
+    }
+  </style>
+  <link rel="stylesheet" href="/WDL_2020/css/style.css">
+  <title>Signup</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <!-- title  -->
+    <div class="title">
+      Signup Form
+    </div>
+    <!-- Form  -->
+
+    <form action="">
+      <div class="field">
+        <!-- firstName  -->
+        <input type="text" required>
+        <label>First Name</label>
+      </div>
+      <!-- LastName  -->
+      <div class="field">
+        <input type="text" required>
+        <label>Last Name</label>
+      </div>
+
+      <!-- Email-Address  -->
+      <div class="field">
+        <input onkeyup="check()" id="email" autocomplete="off" type="text" required>
+        <label>Email Address</label>
+        <div class="icons">
+          <span class="icon1 fas fa-exclamatiom"></span>
+          <span class="icon2 fas fa-check"></span>
+        </div>
+      </div>
+      <!-- error for wrong email (validation indicator)  -->
+      <div class="error-text ">
+        Please Enter Valid Email Address
+      </div>
+
+      <!-- Address  -->
+      <div class="field">
+        <input type="text" class="address" required>
+        <label>Home Address</label>
+      </div>
+
+      <!-- Password  -->
+      <div class="field">
+        <input onkeyup="trigger()" id="pswrd_1" type="password" required>
+        <label>Enter Password</label>
+        <span class="show-btn"><i class="fas fa-eye"></i></span>
+      </div>
+      <!-- indicator  -->
+      <div class="indicator">
+        <span class="weak"></span>
+        <span class="medium"></span>
+        <span class="strong"></span>
+      </div>
+      <div class="text">
+      </div>
+      <!-- Confirmpassword  -->
+      <div class="field">
+        <input id="pswrd_2" type="password" required>
+        <label>Confirm Password</label>
+      </div>
+        <div class="field">
+          <button id="btnSubmit" type="submit">Signup</button>
+        </div>
+        <br>
+        <div class="signup-link">
+          Already a member?<a href="/WDL_2020/login.html">Login now</a>
+          <br>
+          Back to<a href="/WDL_2020/index.html">Home</a>
+        </div>
+    </form>
+  </div>
+  <!-- login validation js code  -->
+  <script src="/WDL_2020/js/login.js"></script>
+  <!-- show password js code  -->
+  <script src="/WDL_2020/js/password_show.js"></script>
+  <!-- strength of password code   -->
+  <script src="/WDL_2020/js/strengthofpass.js"></script>
+  <!-- password and confirm password validation code  -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      $("#btnSubmit").click(function () {
+        var password = $("#pswrd_1").val();
+        var confirmPassword = $("#pswrd_2").val();
+        if (password != confirmPassword) {
+          alert("Passwords do not match.");
+          return false;
+        }
+        return true;
+      });
+    });
+  </script>
+</body>
+
+</html>
